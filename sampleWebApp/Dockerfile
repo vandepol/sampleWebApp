@@ -1,8 +1,8 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1 AS build
+FROM mmicrosoft/dotnet:2.1-aspnetcore-runtime AS build
 WORKDIR /src
 COPY sampleWebApp.sln ./
 COPY sampleWebApp/sampleWebApp.csproj sampleWebApp/
