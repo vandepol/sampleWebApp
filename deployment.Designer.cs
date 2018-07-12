@@ -30,7 +30,7 @@ namespace sampleWebApp {
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("", typeof(deployment).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("sampleWebApp.deployment", typeof(deployment).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

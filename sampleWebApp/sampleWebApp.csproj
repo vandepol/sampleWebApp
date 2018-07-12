@@ -9,4 +9,19 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove=".Dockerfile.swp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="deployment.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>deployment.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="deployment.yaml">
+      <LastGenOutput>deployment.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="deployment.yml">
+      <LastGenOutput>deployment.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

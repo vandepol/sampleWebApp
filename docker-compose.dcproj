@@ -15,4 +15,15 @@
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="deployment.yml">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>deployment.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="deployment.Designer.cs">
+      <DependentUpon>deployment.yml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
