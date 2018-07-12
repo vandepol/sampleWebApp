@@ -6,7 +6,7 @@ FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
 COPY sampleWebApp.sln ./
 COPY sampleWebApp/sampleWebApp.csproj sampleWebApp/
-RUN dotnet restore -nowarn:msb3202,nu1503
+#RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
 WORKDIR /src/sampleWebApp
 RUN dotnet build -c Release -o /app
